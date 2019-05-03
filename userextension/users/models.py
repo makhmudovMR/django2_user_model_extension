@@ -75,10 +75,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=True,
         blank=True
     )
-    birthday = models.DateField(
-        null=True,
-        blank=True
-    )
+
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
