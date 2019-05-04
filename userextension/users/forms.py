@@ -40,3 +40,15 @@ class UserForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+
+class MyAuthenticationForm(forms.Form):
+    """
+    Base class for authenticating users. Extend this to get a form that accepts
+    username/password logins.
+    """
+    email = forms.CharField(max_length=150)
+    password = forms.CharField(
+        label="Password",
+        widget=forms.PasswordInput,
+    )

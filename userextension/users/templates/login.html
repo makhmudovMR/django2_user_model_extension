@@ -5,13 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    Hello {{request.user.email}}
-
     <form action="" method="post">
         {% csrf_token %}
-        {{userform.as_p}}
-        <button type="submit">ok</button>
+        {{form.as_p}}
+        <button type="submit">Войти</button>
     </form>
-
 </body>
 </html>
